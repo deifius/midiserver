@@ -1,0 +1,15 @@
+#N canvas 677 196 454 148 10;
+#X obj 13 34 noteout;
+#X text 6 55 connect to metalblade port 765432;
+#X text 10 74 via udp \, then send midi;
+#X text 26 89 $note $velocity $channel;
+#X obj 152 10 netreceive 654322 1;
+#X obj 13 10 netreceive 654321 1;
+#X obj 152 34 ctlout;
+#X obj 291 10 netreceive 654323 1;
+#X obj 291 34 bendout;
+#X text 8 118 send bend data to port 654323;
+#X text 3 104 send control data to port 654322;
+#X connect 4 0 6 0;
+#X connect 5 0 0 0;
+#X connect 7 0 8 0;
